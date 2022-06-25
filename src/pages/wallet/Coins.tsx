@@ -103,7 +103,7 @@ export const useCoins = (denoms?: Denom[]) => {
 
   if (!denoms) return
 
-  const nativeTokenValues = denoms
+  let nativeTokenValues = denoms
     .map((denom) => {
       const balance = getAmount(bankBalance, denom)
       const value = calcValue({ amount: balance, denom }) ?? 0
@@ -113,6 +113,8 @@ export const useCoins = (denoms?: Denom[]) => {
     .filter(
       ({ denom, balance }) => ["uluna", "uusd"].includes(denom) || has(balance)
     )
+
+  nativeTokenValues = [{denom: 'uflash', balance: '0', value: 0, $: 0}];
 
   const coins = sortByDenom(
     nativeTokenValues,

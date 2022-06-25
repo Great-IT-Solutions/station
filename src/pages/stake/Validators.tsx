@@ -114,7 +114,7 @@ const Validators = () => {
           </section>
         )}
 
-        <Table
+        {/* <Table
           key={Number(byRank)}
           onSort={() => setByRank(false)}
           initialSorterKey={byRank ? undefined : "rewards"}
@@ -245,7 +245,7 @@ const Validators = () => {
               hidden: !isClassic,
             },
           ]}
-        />
+        /> */}
       </>
     )
   }

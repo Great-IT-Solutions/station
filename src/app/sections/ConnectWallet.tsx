@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import UsbIcon from "@mui/icons-material/Usb"
-import { useWallet } from "@terra-money/wallet-provider"
+import { ConnectType, useWallet } from "@terra-money/wallet-provider"
 import { STATION } from "config/constants"
 import { RenderButton } from "types/components"
 import { useAddress } from "data/wallet"
@@ -20,9 +20,16 @@ interface Props {
 const ConnectWallet = ({ renderButton }: Props) => {
   const { t } = useTranslation()
 
-  const { connect, availableConnections, availableInstallations } = useWallet()
-  const { available } = useAuth()
-
+  let { connect, availableConnections, availableInstallations } = useWallet()
+  availableInstallations = availableInstallations.filter((value, index) => { return value.name != 'XDEFI Wallet' })
+  availableInstallations.push({
+    type: ConnectType.EXTENSION,
+    identifier: "Flash Wallet",
+    name: "Flash Wallet",
+    icon: "https://cdn-ejdhi.nitrocdn.com/jqABjMJkQitwROTPFwgUNEtCmHjrPqUF/assets/static/optimized/rev-8da1105/wp-content/uploads/2021/12/logo-Flash-Token-valide-2-01-1-1.png",
+    url: "https://chrome.google.com/webstore/detail/bitkeep-bitcoin-crypto-wa/jiidiaalihmmhddjgbnbgdfflelocpak"
+  })
+  const { available } = useAuth()  
   const address = useAddress()
   if (address) return <Connected />
 

@@ -60,7 +60,7 @@ const Tabs = ({ tabs, defaultActiveKey, type, reversed, state }: Props) => {
         )}
       </section>
 
-      {tabs.find((tab) => tab.key === (state ? activeKey : hash))?.children}
+      {/* {tabs.find((tab) => tab.key === (state ? activeKey : hash))?.children} */}
     </>
   )
 }

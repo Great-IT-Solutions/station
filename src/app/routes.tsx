@@ -57,6 +57,7 @@ import Labs from "pages/labs/Labs"
 
 /* 404 */
 import NotFound from "pages/NotFound"
+import { Redirect } from "components/redirect/Redirect"
 
 const ICON_SIZE = { width: 20, height: 20 }
 
@@ -97,8 +98,8 @@ export const useNav = () => {
       icon: <GovernanceIcon {...ICON_SIZE} />,
     },
     {
-      path: "https://opensea.io/Flash_Technologies",
-      element: <NFT />,
+      path: "/nft",
+      element: <Redirect path="https://opensea.io/Flash_Technologies" />,
       title: t("NFT"),
       icon: <NFTIcon {...ICON_SIZE} />,
     },
@@ -107,6 +108,18 @@ export const useNav = () => {
       element: <Contract />,
       title: t("Contract"),
       icon: <ContractIcon {...ICON_SIZE} />,
+    },
+    {
+      path: "/bridge",
+      element: <Redirect path="https://app.flash-bridge.com" />,
+      title: t("Bridge"),
+      icon: <NFTIcon {...ICON_SIZE} />,
+    },
+    {
+      path: "/launchpad",
+      element: <Redirect path="http://flash-pad.com/presale/#/" />,
+      title: t("Launchpad"),
+      icon: <NFTIcon {...ICON_SIZE} />,
     },
   ].filter(({ classic }) => {
     if (isClassic) return true

@@ -77,11 +77,13 @@ export const readNativeDenom = (
   const symbol = readDenom(denom)
   const symbolClassic = denom === "uluna" ? "LUNC" : symbol + "C"
 
-  const path = isDenomTerra(denom)
-    ? `Terra/${symbol}.svg`
-    : isClassic
-    ? "LUNC.svg"
-    : "LUNA.png"
+  // const path = isDenomTerra(denom)
+  //   ? `Terra/${symbol}.svg`
+  //   : isClassic
+  //   ? "LUNC.svg"
+  //   : "LUNA.png"
+
+  const path = "https://cdn-ejdhi.nitrocdn.com/jqABjMJkQitwROTPFwgUNEtCmHjrPqUF/assets/static/optimized/rev-8da1105/wp-content/uploads/2021/12/logo-Flash-Token-valide-2-01-1-1.png";
 
   return {
     token: denom,
@@ -89,7 +91,8 @@ export const readNativeDenom = (
     name: isDenomTerra(denom)
       ? `Terra ${denom.slice(1).toUpperCase()}`
       : undefined,
-    icon: getIcon(path),
+    //icon: getIcon(path),
+    icon: path,
     decimals: 6,
   }
 }

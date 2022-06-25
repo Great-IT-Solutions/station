@@ -14,7 +14,7 @@ export const FINDER = "https://finder.terra.money"
 export const EXTENSION =
   "https://chrome.google.com/webstore/detail/aiifbnbfobpmeekipheeijimdpnlpgpp"
 export const TUTORIAL =
-  "https://docs.terra.money/Tutorials/Get-started/Terra-Station-desktop.html"
+  "https://flash-technologies.gitbook.io/docs/overall-documents/flash-technologies"
 
 /* website: stake */
 export const TERRA_VALIDATORS =

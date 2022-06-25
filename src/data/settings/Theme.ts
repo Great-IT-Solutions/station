@@ -49,7 +49,7 @@ export const useThemeState = () => {
       if (!validate(nextTheme)) set(DefaultTheme)
       if (prevTheme.name) document.body.classList.remove(prevTheme.name)
       if (nextTheme.name) document.body.classList.add(nextTheme.name)
-      setFavicon(nextTheme.favicon)
+      // setFavicon(nextTheme.favicon)
       setThemeName(nextTheme.name)
       setLocalSetting<Theme["name"]>(SettingKey.Theme, nextTheme.name)
     },

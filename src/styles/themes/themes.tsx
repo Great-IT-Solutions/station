@@ -48,34 +48,34 @@ export const themes: Theme[] = [
     favicon: FaviconDark,
     preview: <PreviewDark />,
   },
-  {
-    name: "blossom",
-    unlock: toAmount("1"),
-    animation: AnimationBlossom,
-    favicon: FaviconBlossom,
-    preview: <PreviewBlossom />,
-  },
-  {
-    name: "moon",
-    unlock: toAmount("10"),
-    animation: AnimationMoon,
-    favicon: FaviconMoon,
-    preview: <PreviewMoon />,
-  },
-  {
-    name: "whale",
-    unlock: toAmount("100"),
-    animation: AnimationWhale,
-    favicon: FaviconWhale,
-    preview: <PreviewWhale />,
-  },
-  {
-    name: "madness",
-    unlock: toAmount("1000"),
-    animation: AnimationMadness,
-    favicon: FaviconMadness,
-    preview: <PreviewMadness />,
-  },
+  // {
+  //   name: "blossom",
+  //   unlock: toAmount("1"),
+  //   animation: AnimationBlossom,
+  //   favicon: FaviconBlossom,
+  //   preview: <PreviewBlossom />,
+  // },
+  // {
+  //   name: "moon",
+  //   unlock: toAmount("10"),
+  //   animation: AnimationMoon,
+  //   favicon: FaviconMoon,
+  //   preview: <PreviewMoon />,
+  // },
+  // {
+  //   name: "whale",
+  //   unlock: toAmount("100"),
+  //   animation: AnimationWhale,
+  //   favicon: FaviconWhale,
+  //   preview: <PreviewWhale />,
+  // },
+  // {
+  //   name: "madness",
+  //   unlock: toAmount("1000"),
+  //   animation: AnimationMadness,
+  //   favicon: FaviconMadness,
+  //   preview: <PreviewMadness />,
+  // },
 ]
 
 export default themes

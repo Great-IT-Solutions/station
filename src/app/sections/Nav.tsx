@@ -21,7 +21,7 @@ const Nav = () => {
     <nav>
       <header className={styles.header}>
         <NavLink to="/" className={classNames(styles.item, styles.logo)}>
-          <img src={LogoImage}></img>
+          <img src={LogoImage} alt="Logo Image"></img>
           <strong>Flash</strong>Bridge
         </NavLink>
 

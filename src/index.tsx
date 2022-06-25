@@ -18,6 +18,7 @@ import InitWallet from "app/InitWallet"
 import InitTheme from "app/InitTheme"
 import ElectronVersion from "app/ElectronVersion"
 import App from "app/App"
+import './index.scss'
 
 const connectorOpts = { bridge: BRIDGE }
 

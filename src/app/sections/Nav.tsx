@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close"
 import { mobileIsMenuOpenState } from "components/layout"
 import { useNav } from "../routes"
 import styles from "./Nav.module.scss"
+import LogoImage from "styles/images/flash-logo.png"
 
 const cx = classNames.bind(styles)
 
@@ -20,7 +21,8 @@ const Nav = () => {
     <nav>
       <header className={styles.header}>
         <NavLink to="/" className={classNames(styles.item, styles.logo)}>
-          <strong>Terra</strong> Station
+          <img src={LogoImage}></img>
+          <strong>Flash</strong>Bridge
         </NavLink>
 
         <button className={styles.toggle} onClick={toggle}>

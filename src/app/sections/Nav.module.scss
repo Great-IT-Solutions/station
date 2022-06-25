@@ -34,9 +34,14 @@
   font-weight: 300;
   padding: 0 20px;
   line-height: var(--header-height);
+  color: #d3b16e;
+  img {
+    width: 50px;
+  }
 
   strong {
     font-weight: 700;
+    color: #d3b16e;
   }
 }
 

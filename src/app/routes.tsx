@@ -97,7 +97,7 @@ export const useNav = () => {
       icon: <GovernanceIcon {...ICON_SIZE} />,
     },
     {
-      path: "/nft",
+      path: "https://opensea.io/Flash_Technologies",
       element: <NFT />,
       title: t("NFT"),
       icon: <NFTIcon {...ICON_SIZE} />,

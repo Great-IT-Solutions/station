@@ -24,7 +24,7 @@ const Nav = () => {
       <header className={styles.header}>
         <NavLink to="/" className={classNames(styles.item, styles.logo)}>
           <img src={LogoImage} alt={t("Logo")}></img>
-          <strong>Flash</strong>Bridge
+          <strong>Flash</strong>Station
         </NavLink>
 
         <button className={styles.toggle} onClick={toggle}>

@@ -8,6 +8,7 @@ import { mobileIsMenuOpenState } from "components/layout"
 import { useNav } from "../routes"
 import styles from "./Nav.module.scss"
 import LogoImage from "styles/images/flash-logo.png"
+import { useTranslation } from "react-i18next"
 
 const cx = classNames.bind(styles)
 
@@ -16,12 +17,13 @@ const Nav = () => {
   const { menu } = useNav()
   const [isOpen, setIsOpen] = useRecoilState(mobileIsMenuOpenState)
   const toggle = () => setIsOpen(!isOpen)
+  const { t } = useTranslation()
 
   return (
     <nav>
       <header className={styles.header}>
         <NavLink to="/" className={classNames(styles.item, styles.logo)}>
-          <img src={LogoImage} alt="Logo Image"></img>
+          <img src={LogoImage} alt={t("Logo")}></img>
           <strong>Flash</strong>Bridge
         </NavLink>
 

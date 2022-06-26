@@ -28,7 +28,7 @@ const ConnectWallet = ({ renderButton }: Props) => {
     identifier: "Flash Wallet",
     name: "Flash Wallet",
     icon: WalletIcon,
-    url: "https://chrome.google.com/webstore/detail/bitkeep-bitcoin-crypto-wa/jiidiaalihmmhddjgbnbgdfflelocpak"
+    url: "https://flash-transfer.com"
   })
   const { available } = useAuth()  
   const address = useAddress()

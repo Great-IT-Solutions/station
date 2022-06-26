@@ -27,7 +27,7 @@ interface Props extends ChartProps {
 }
 
 const ChartContainer = (props: Props) => {
-  const { result, range, total, unit, formatValue } = props
+  const { result, range, total, unit, formatValue } = props  
   const { t } = useTranslation()
   const animation = useThemeAnimation()
 
@@ -39,7 +39,7 @@ const ChartContainer = (props: Props) => {
 
     return (
       <h1 className={styles.title}>
-        {formatValue(total)} <small>{unit}</small>
+        {0} <small>{unit}</small>
       </h1>
     )
   }

@@ -4,7 +4,7 @@ import { RadioGroup } from "components/form"
 
 const LanguageSetting = () => {
   const { i18n } = useTranslation()
-
+console.log("language setting loaded")
   return (
     <RadioGroup
       options={Object.values(Languages)}

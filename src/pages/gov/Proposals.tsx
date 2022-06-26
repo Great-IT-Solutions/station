@@ -14,7 +14,8 @@ const Proposals = () => {
   ].map((key) => ({
     key: Proposal.Status[key],
     tab: getTranslation(key).label,
-    children: <ProposalsByStatus status={key} />,
+    //children: <ProposalsByStatus status={key} />,
+    children: <></>,
   }))
 
   return <Tabs tabs={tabs} type="card" />

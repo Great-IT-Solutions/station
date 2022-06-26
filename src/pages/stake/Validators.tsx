@@ -70,7 +70,8 @@ const Validators = () => {
 
   const renderCount = () => {
     if (!validators) return null
-    const count = validators.filter(({ status }) => getIsBonded(status)).length
+    const count = 0;
+    //const count = validators.filter(({ status }) => getIsBonded(status)).length
     return t("{{count}} active validators", { count })
   }
 

@@ -20,12 +20,13 @@ const StakingRatio = () => {
     if (!(stakingPool && supply)) return null
 
     const bonded = stakingPool.bonded_tokens.amount.toString()
-    const issuance = supply.find(({ denom }) => denom === "uluna")?.amount
+    const issuance = supply.find(({ denom }) => denom === "uflash")?.amount
 
     if (!issuance) return null
 
-    const ratio = Number(bonded) / Number(issuance)
-    const tooltip = t("{{amount}} Luna staked", {
+    //const ratio = Number(bonded) / Number(issuance)
+    const ratio = 10;
+    const tooltip = t("{{amount}} Flash staked", {
       amount: readAmount(bonded, { prefix: true, integer: true }),
     })
 

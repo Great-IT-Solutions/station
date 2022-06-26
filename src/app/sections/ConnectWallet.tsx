@@ -12,6 +12,7 @@ import { FormHelp } from "components/form"
 import { useAuth } from "auth"
 import SwitchWallet from "auth/modules/select/SwitchWallet"
 import Connected from "./Connected"
+import WalletIcon from "../../styles/images/flash-wallet.png"
 
 interface Props {
   renderButton?: RenderButton
@@ -21,12 +22,12 @@ const ConnectWallet = ({ renderButton }: Props) => {
   const { t } = useTranslation()
 
   let { connect, availableConnections, availableInstallations } = useWallet()
-  availableInstallations = availableInstallations.filter((value, index) => { return value.name != 'XDEFI Wallet' })
+  availableInstallations = availableInstallations.filter((value, index) => { return value.name != 'XDEFI Wallet' && value.name != 'Terra Station'})
   availableInstallations.push({
     type: ConnectType.EXTENSION,
     identifier: "Flash Wallet",
     name: "Flash Wallet",
-    icon: "https://cdn-ejdhi.nitrocdn.com/jqABjMJkQitwROTPFwgUNEtCmHjrPqUF/assets/static/optimized/rev-8da1105/wp-content/uploads/2021/12/logo-Flash-Token-valide-2-01-1-1.png",
+    icon: WalletIcon,
     url: "https://chrome.google.com/webstore/detail/bitkeep-bitcoin-crypto-wa/jiidiaalihmmhddjgbnbgdfflelocpak"
   })
   const { available } = useAuth()  

@@ -1,9 +1,11 @@
-import { useEffect } from "react"
+  import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate, useRoutes } from "react-router-dom"
 
 import { ReactComponent as WalletIcon } from "styles/images/menu/Wallet.svg"
 import { ReactComponent as NFTIcon } from "styles/images/menu/NFT.svg"
+import BridgeIcon from "styles/images/menu/bridge.svg"
+import LaunchpadIcon from "styles/images/menu/launchpad.svg"
 import { ReactComponent as HistoryIcon } from "styles/images/menu/History.svg"
 import { ReactComponent as SwapIcon } from "styles/images/menu/Swap.svg"
 import { ReactComponent as StakeIcon } from "styles/images/menu/Stake.svg"
@@ -113,13 +115,13 @@ export const useNav = () => {
       path: "/bridge",
       element: <Redirect path="https://app.flash-bridge.com" />,
       title: t("Bridge"),
-      icon: <NFTIcon {...ICON_SIZE} />,
+      icon: <img src={BridgeIcon} alt={`bridge`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },
     {
       path: "/launchpad",
       element: <Redirect path="http://flash-pad.com/presale/#/" />,
       title: t("Launchpad"),
-      icon: <NFTIcon {...ICON_SIZE} />,
+      icon: <img src={LaunchpadIcon} alt={`launchpad`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },
   ].filter(({ classic }) => {
     if (isClassic) return true

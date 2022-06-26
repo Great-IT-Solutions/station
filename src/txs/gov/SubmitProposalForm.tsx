@@ -64,7 +64,7 @@ const SubmitProposalForm = ({ communityPool, minDeposit }: Props) => {
   const address = useAddress()
 
   const bankBalance = useBankBalance()
-  const balance = getAmount(bankBalance, "uluna")
+  const balance = getAmount(bankBalance, "uflash")
 
   /* tx context */
   const initialGasDenom = getInitialGasDenom(bankBalance)
@@ -94,7 +94,7 @@ const SubmitProposalForm = ({ communityPool, minDeposit }: Props) => {
     ({ input, title, description, ...values }: TxValues) => {
       if (!address) return
       const amount = toAmount(input)
-      const deposit = has(amount) ? new Coins({ uluna: amount }) : []
+      const deposit = has(amount) ? new Coins({ uflash: amount }) : []
 
       const getContent = () => {
         if (values.type === ProposalType.SPEND) {
@@ -141,7 +141,7 @@ const SubmitProposalForm = ({ communityPool, minDeposit }: Props) => {
     [setValue, trigger]
   )
 
-  const token = "uluna"
+  const token = "uflash"
   const tx = {
     token,
     amount,
@@ -188,7 +188,7 @@ const SubmitProposalForm = ({ communityPool, minDeposit }: Props) => {
               placeholder={placeholder}
               selectBefore={
                 <Select {...register("spend.denom")} before>
-                  {["uluna", "uusd"].map((denom) => (
+                  {["uflash", "uusd"].map((denom) => (
                     <option value={denom} key={denom}>
                       {readDenom(denom)}
                     </option>
@@ -299,7 +299,7 @@ const SubmitProposalForm = ({ communityPool, minDeposit }: Props) => {
                 required: "Description is required",
               })}
               placeholder={t(
-                "We’re proposing to initiate the burn of 100,000,000 LUNA from the Community Pool to mint UST"
+                "We’re proposing to initiate the burn of 100,000,000 FLASH from the Community Pool to mint UST"
               )}
             />
           </FormItem>
@@ -319,7 +319,7 @@ const SubmitProposalForm = ({ communityPool, minDeposit }: Props) => {
                   true
                 ),
               })}
-              token="uluna"
+              token="uflash"
               onFocus={max.reset}
               inputMode="decimal"
               placeholder={getPlaceholder()}

@@ -6,7 +6,8 @@ import { Contacts } from "components/layout"
 import styles from "./Links.module.scss"
 
 const community = {
-  medium: "https://linktr.ee/FlashTechnologies",
+  linktree: "https://linktr.ee/FlashTechnologies",
+  // medium: "https://linktr.ee/FlashTechnologies",
   discord: "https://linktr.ee/FlashTechnologies",
   telegram: "https://linktr.ee/FlashTechnologies",
   twitter: "https://linktr.ee/FlashTechnologies",

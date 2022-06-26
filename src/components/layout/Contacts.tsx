@@ -6,6 +6,7 @@ import { ReactComponent as Discord } from "styles/images/community/Discord.svg"
 import { ReactComponent as Telegram } from "styles/images/community/Telegram.svg"
 import { ReactComponent as Twitter } from "styles/images/community/Twitter.svg"
 import { ReactComponent as Github } from "styles/images/community/Github.svg"
+import { ReactComponent as Linktree } from "styles/images/community/Linktree.svg"
 import { ExternalLink } from "components/general"
 import { Flex } from "components/layout"
 import styles from "./Contacts.module.scss"
@@ -15,6 +16,7 @@ const cx = classNames.bind(styles)
 const ICON_SIZE = { width: 18, height: 18 }
 
 const icons: Record<string, ReactNode> = {
+  linktree: <Linktree {...ICON_SIZE} />,
   medium: <Medium {...ICON_SIZE} />,
   discord: <Discord {...ICON_SIZE} />,
   telegram: <Telegram {...ICON_SIZE} />,

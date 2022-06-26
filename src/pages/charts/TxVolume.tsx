@@ -32,12 +32,12 @@ const TxVolume = () => {
     if (!activeDenoms) return null
     return (
       <Filter>
-        <Select value={denom} onChange={(e) => setDenom(e.target.value)} small>
+        <Select value={'uluna'} onChange={(e) => setDenom(e.target.value)} small>
           {sortDenoms(activeDenoms, currency)
             .filter(isDenomTerraNative)
             .map((denom) => (
               <option value={denom} key={denom}>
-                {readDenom(denom)}
+                {readDenom('uflash')}
               </option>
             ))}
         </Select>
@@ -91,10 +91,10 @@ const TxVolume = () => {
             <ChartContainer
               type={type === Aggregate.CUMULATIVE || filled ? "area" : "bar"}
               filled={filled}
-              result={data}
+              result={[]}
               range={range}
-              total={calcValue(range)}
-              unit={readDenom(denom)}
+              total={'0'}
+              unit={"flash"}
               formatValue={(value) => readAmount(value, { prefix: true })}
               formatY={(value) =>
                 readAmount(value, { prefix: true, integer: true })

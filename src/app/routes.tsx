@@ -72,7 +72,7 @@ export const useNav = () => {
   const menu = [
     {
       path: "/dashboard",
-      element: <Redirect path="https://comfy-croissant-81fea6.netlify.app/" />,
+      element: <Redirect path="https://station-flash.com/" />,
       title: t("Dashboard"),
       icon: <img src={DashboardIcon} alt={`bridge`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },
@@ -111,6 +111,12 @@ export const useNav = () => {
       path: "/flash-token",
       element: <Redirect path="https://flash-token.com/en" />,
       title: t("Flash Token"),
+      icon: <img src={WebsiteIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
+    }, 
+    {
+      path: "/flash-transfer",
+      element: <Redirect path="https://flash-transfer.com/en" />,
+      title: t("Flash Transfer"),
       icon: <img src={WebsiteIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },  
     {

@@ -7,6 +7,7 @@ import { ReactComponent as NFTIcon } from "styles/images/menu/NFT.svg"
 import BridgeIcon from "styles/images/menu/bridge.svg"
 import LaunchpadIcon from "styles/images/menu/launchpad.svg"
 import DashboardIcon from "styles/images/menu/dashboard.png"
+import WebsiteIcon from "styles/images/menu/website.png"
 import { ReactComponent as HistoryIcon } from "styles/images/menu/History.svg"
 import { ReactComponent as SwapIcon } from "styles/images/menu/Swap.svg"
 import { ReactComponent as StakeIcon } from "styles/images/menu/Stake.svg"
@@ -106,6 +107,12 @@ export const useNav = () => {
       title: t("Governance"),
       icon: <GovernanceIcon {...ICON_SIZE} />,
     },
+    {
+      path: "/audit",
+      element: <Redirect path="https://flash-audit.com/en/" />,
+      title: t("Audit"),
+      icon: <img src={WebsiteIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
+    },  
     {
       path: "/nft",
       element: <Redirect path="https://opensea.io/Flash_Technologies" />,

@@ -8,6 +8,8 @@ import BridgeIcon from "styles/images/menu/bridge.svg"
 import LaunchpadIcon from "styles/images/menu/launchpad.svg"
 import DashboardIcon from "styles/images/menu/dashboard.png"
 import WebsiteIcon from "styles/images/menu/website.png"
+import TransferIcon from "styles/images/menu/transfer.png"
+import AuditIcon from "styles/images/menu/audit.png"
 import { ReactComponent as HistoryIcon } from "styles/images/menu/History.svg"
 import { ReactComponent as SwapIcon } from "styles/images/menu/Swap.svg"
 import { ReactComponent as StakeIcon } from "styles/images/menu/Stake.svg"
@@ -111,7 +113,7 @@ export const useNav = () => {
       path: "/flash-transfer",
       element: <Redirect path="https://flash-transfer.com/en" />,
       title: t("Flash Transfer"),
-      icon: <img src={WebsiteIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
+      icon: <img src={TransferIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },  
     {
       path: "/flash-token",
@@ -123,7 +125,7 @@ export const useNav = () => {
       path: "/audit",
       element: <Redirect path="https://flash-audit.com/en/" />,
       title: t("Audit"),
-      icon: <img src={WebsiteIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
+      icon: <img src={AuditIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },  
     {
       path: "/nft",

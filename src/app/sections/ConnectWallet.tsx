@@ -39,10 +39,10 @@ const ConnectWallet = ({ renderButton }: Props) => {
       {t("Connect")}
     </Button>
   )
-  console.log(availableConnections)
+  console.log(availableConnections, availableInstallations)
   const list = [
     ...availableConnections    
-    .filter((value, index) => { return value.name != "Terra Station Wallet"})
+    .filter((value, index) => { return value.name != "Terra Station Wallet" && value.name !="View an address"})
     .map(({ type, identifier, name, icon }) => ({
       src: icon,
       children: name,
@@ -71,7 +71,7 @@ const ConnectWallet = ({ renderButton }: Props) => {
         <List list={available.length ? available : list} />
         {!!available.length && (
           <FormHelp>
-            Use <ExternalLink href={STATION}>Terra Station</ExternalLink> on the
+            Use <ExternalLink href={STATION}>Flash Station</ExternalLink> on the
             browser to access with Ledger device
           </FormHelp>
         )}

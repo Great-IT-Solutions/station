@@ -46,7 +46,11 @@ const StakingReturn = () => {
     [AggregateStakingReturn.ANNUALIZED]: t("year"),
     [AggregateStakingReturn.DAILY]: t("day"),
   }
-
+  let fakeData: ChartDataItem[]   = [];
+  data?.map((value, index) => {
+    fakeData.push({datetime: value.datetime, value: "0"})
+  })
+  console.log(fakeData);
   const render = () => {
     if (!data) return null
     return (
@@ -61,7 +65,7 @@ const StakingReturn = () => {
                   : "bar"
               }
               filled={filled}
-              result={data}
+              result={fakeData}
               range={range}
               total={data && last(data)?.value}
               unit={`/ ${unit[type]}`}
@@ -85,7 +89,7 @@ const StakingReturn = () => {
       title={
         <TooltipIcon
           content={t(
-            "The annualized staking yield for Luna is based on gas rewards, minting rewards, and the price of flash (annualized return = 10 day moving average return * 365)."
+            "The annualized staking yield for Flash is based on gas rewards, minting rewards, and the price of flash (annualized return = 10 day moving average return * 365)."
           )}
         >
           {t("Staking return")}

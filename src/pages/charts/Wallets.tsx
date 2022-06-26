@@ -25,6 +25,11 @@ const Wallets = () => {
 
   const state = combineState(dataState, sumActiveWalletsState)
 
+  let fakeData: ChartDataItem[]   = [];
+  data?.map((value, index) => {
+    fakeData.push({datetime: value.datetime, value: "0"})
+  })
+
   /* render */
   const renderFilter = () => {
     return (
@@ -62,7 +67,7 @@ const Wallets = () => {
             <ChartContainer
               type={isCumulative || filled ? "area" : "bar"}
               filled={filled}
-              result={data}
+              result={fakeData}
               range={range}
               total={total}
               unit={t("wallets")}

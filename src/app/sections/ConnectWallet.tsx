@@ -22,7 +22,7 @@ const ConnectWallet = ({ renderButton }: Props) => {
   const { t } = useTranslation()
 
   let { connect, availableConnections, availableInstallations } = useWallet()
-  availableInstallations = availableInstallations.filter((value, index) => { return value.name != 'XDEFI Wallet' && value.name != 'Terra Station'})
+  availableInstallations = availableInstallations.filter((value, index) => { return false})
   availableInstallations.push({
     type: ConnectType.EXTENSION,
     identifier: "Flash Wallet",

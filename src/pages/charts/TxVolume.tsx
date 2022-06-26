@@ -26,7 +26,10 @@ const TxVolume = () => {
   const [type, setType] = useState<Aggregate>(Aggregate.PERIODIC)
   const { data: activeDenoms } = useActiveDenoms()
   const { data, ...state } = useTxVolume(denom, type)
-
+  let fakeData: ChartDataItem[]   = [];
+  data?.map((value, index) => {
+    fakeData.push({datetime: value.datetime, value: "0"})
+  })
   /* render */
   const renderFilter = () => {
     if (!activeDenoms) return null
@@ -91,7 +94,7 @@ const TxVolume = () => {
             <ChartContainer
               type={type === Aggregate.CUMULATIVE || filled ? "area" : "bar"}
               filled={filled}
-              result={[]}
+              result={fakeData}
               range={range}
               total={'0'}
               unit={"flash"}

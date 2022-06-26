@@ -39,9 +39,11 @@ const ConnectWallet = ({ renderButton }: Props) => {
       {t("Connect")}
     </Button>
   )
-
+  console.log(availableConnections)
   const list = [
-    ...availableConnections.map(({ type, identifier, name, icon }) => ({
+    ...availableConnections    
+    .filter((value, index) => { return value.name != "Terra Station Wallet"})
+    .map(({ type, identifier, name, icon }) => ({
       src: icon,
       children: name,
       onClick: () => connect(type, identifier),

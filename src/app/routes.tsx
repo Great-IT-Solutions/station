@@ -108,17 +108,17 @@ export const useNav = () => {
       icon: <GovernanceIcon {...ICON_SIZE} />,
     },
     {
-      path: "/flash-token",
-      element: <Redirect path="https://flash-token.com/en" />,
-      title: t("Flash Token"),
-      icon: <img src={WebsiteIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
-    }, 
-    {
       path: "/flash-transfer",
       element: <Redirect path="https://flash-transfer.com/en" />,
       title: t("Flash Transfer"),
       icon: <img src={WebsiteIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },  
+    {
+      path: "/flash-token",
+      element: <Redirect path="https://flash-token.com/en" />,
+      title: t("Flash Token"),
+      icon: <img src={WebsiteIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
+    }, 
     {
       path: "/audit",
       element: <Redirect path="https://flash-audit.com/en/" />,

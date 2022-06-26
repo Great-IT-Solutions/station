@@ -7,11 +7,12 @@ import styles from "./Links.module.scss"
 
 const community = {
   linktree: "https://linktr.ee/FlashTechnologies",
+  website: "https://flash-token.com/en",
   // medium: "https://linktr.ee/FlashTechnologies",
-  discord: "https://linktr.ee/FlashTechnologies",
-  telegram: "https://linktr.ee/FlashTechnologies",
-  twitter: "https://linktr.ee/FlashTechnologies",
-  github: "https://linktr.ee/FlashTechnologies",
+  discord: "https://discord.com/invite/kkGDbGtTFz",
+  telegram: "https://t.me/flashtokenenglish",
+  twitter: "https://twitter.com/Flash_Techno_Of",
+  github: "https://github.com/FlashTechnologiesOff",
 }
 
 const Links = () => {

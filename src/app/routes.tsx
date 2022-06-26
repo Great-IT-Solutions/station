@@ -6,6 +6,7 @@ import { ReactComponent as WalletIcon } from "styles/images/menu/Wallet.svg"
 import { ReactComponent as NFTIcon } from "styles/images/menu/NFT.svg"
 import BridgeIcon from "styles/images/menu/bridge.svg"
 import LaunchpadIcon from "styles/images/menu/launchpad.svg"
+import DashboardIcon from "styles/images/menu/dashboard.png"
 import { ReactComponent as HistoryIcon } from "styles/images/menu/History.svg"
 import { ReactComponent as SwapIcon } from "styles/images/menu/Swap.svg"
 import { ReactComponent as StakeIcon } from "styles/images/menu/Stake.svg"
@@ -69,6 +70,12 @@ export const useNav = () => {
 
   const menu = [
     {
+      path: "/dashboard",
+      element: <Redirect path="https://comfy-croissant-81fea6.netlify.app/" />,
+      title: t("Dashboard"),
+      icon: <img src={DashboardIcon} alt={`bridge`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
+    },
+    {
       path: "/wallet",
       element: <Wallet />,
       title: t("Wallet"),
@@ -104,13 +111,7 @@ export const useNav = () => {
       element: <Redirect path="https://opensea.io/Flash_Technologies" />,
       title: t("NFT"),
       icon: <NFTIcon {...ICON_SIZE} />,
-    },
-    {
-      path: "/contract",
-      element: <Contract />,
-      title: t("Contract"),
-      icon: <ContractIcon {...ICON_SIZE} />,
-    },
+    },    
     {
       path: "/bridge",
       element: <Redirect path="https://app.flash-bridge.com" />,

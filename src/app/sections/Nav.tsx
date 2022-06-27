@@ -9,6 +9,7 @@ import { useNav } from "../routes"
 import styles from "./Nav.module.scss"
 import LogoImage from "styles/images/flash-logo.png"
 import { useTranslation } from "react-i18next"
+import { ExternalLink } from "components/general"
 
 const cx = classNames.bind(styles)
 
@@ -32,8 +33,8 @@ const Nav = () => {
         </button>
       </header>
 
-      {menu.map(({ path, title, icon }) => (
-        <NavLink
+      {menu.map(({ path, pathname, title, icon }) => (
+        !pathname ? <NavLink
           to={path}
           className={({ isActive }) =>
             cx(styles.item, styles.link, { active: isActive })
@@ -42,7 +43,17 @@ const Nav = () => {
         >
           {icon}
           {title}
-        </NavLink>
+        </NavLink> :
+          <a
+            href={pathname}
+            className={
+              cx(styles.item, styles.link)
+            }
+            key={path} target="_blank"
+          >
+            {icon}
+            {title}
+          </a>
       ))}
     </nav>
   )

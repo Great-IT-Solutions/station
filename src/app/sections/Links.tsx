@@ -7,7 +7,7 @@ import styles from "./Links.module.scss"
 
 const community = {
   linktree: "https://linktr.ee/FlashTechnologies",
-  website: "https://flash-token.com/en",
+  website: "https://www.instagram.com/flash_token_off/",
   // medium: "https://linktr.ee/FlashTechnologies",
   discord: "https://discord.com/invite/kkGDbGtTFz",
   telegram: "https://t.me/flashtokenenglish",

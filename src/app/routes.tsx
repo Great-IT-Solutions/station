@@ -74,6 +74,7 @@ export const useNav = () => {
   const menu = [
     {
       path: "/dashboard",
+      pathname: "https://station-flash.com/",
       element: <Redirect path="https://station-flash.com/" />,
       title: t("Dashboard"),
       icon: <img src={DashboardIcon} alt={`bridge`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
@@ -111,36 +112,42 @@ export const useNav = () => {
     },
     {
       path: "/flash-transfer",
-      element: <Redirect path="https://flash-transfer.com/en" />,
+      pathname: "https://flash-transfer.com",
+      element: <Redirect path="https://flash-transfer.com" />,
       title: t("Flash Transfer"),
       icon: <img src={TransferIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },  
     {
       path: "/flash-token",
+      pathname: "https://flash-token.com/en",
       element: <Redirect path="https://flash-token.com/en" />,
       title: t("Flash Token"),
       icon: <img src={WebsiteIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     }, 
     {
       path: "/audit",
+      pathname: "https://flash-audit.com/en/",
       element: <Redirect path="https://flash-audit.com/en/" />,
       title: t("Audit"),
       icon: <img src={AuditIcon} alt={`audit`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },  
     {
       path: "/nft",
+      pathname: "https://opensea.io/Flash_Technologies",
       element: <Redirect path="https://opensea.io/Flash_Technologies" />,
       title: t("NFT"),
       icon: <NFTIcon {...ICON_SIZE} />,
     },    
     {
       path: "/bridge",
+      pathname: "https://app.flash-bridge.com",
       element: <Redirect path="https://app.flash-bridge.com" />,
       title: t("Bridge"),
       icon: <img src={BridgeIcon} alt={`bridge`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },
     {
       path: "/launchpad",
+      pathname: "https://flash-pad.com/presale/#/", 
       element: <Redirect path="http://flash-pad.com/presale/#/" />,
       title: t("Launchpad"),
       icon: <img src={LaunchpadIcon} alt={`launchpad`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,

@@ -13,6 +13,7 @@ import { useAuth } from "auth"
 import SwitchWallet from "auth/modules/select/SwitchWallet"
 import Connected from "./Connected"
 import WalletIcon from "../../styles/images/flash-wallet.png"
+import TrustWalletIcon from "../../styles/images/trust-wallet-token.svg"
 
 interface Props {
   renderButton?: RenderButton
@@ -22,15 +23,23 @@ const ConnectWallet = ({ renderButton }: Props) => {
   const { t } = useTranslation()
 
   let { connect, availableConnections, availableInstallations } = useWallet()
-  availableInstallations = availableInstallations.filter((value, index) => { return false})
+  availableInstallations = availableInstallations.filter((value, index) => { return false })
+  console.log(availableConnections)
   availableInstallations.push({
     type: ConnectType.EXTENSION,
     identifier: "Flash Wallet",
     name: "Flash Wallet",
     icon: WalletIcon,
-    url: "https://flash-transfer.com"
-  })
-  const { available } = useAuth()  
+    url: "https://station-flash.com"
+  },
+    {
+      type: ConnectType.EXTENSION,
+      identifier: "Trust Wallet",
+      name: "Trust Wallet",
+      icon: TrustWalletIcon,
+      url: "https://trustwallet.com/dapp/"
+    })
+  const { available } = useAuth()
   const address = useAddress()
   if (address) return <Connected />
 
@@ -39,15 +48,14 @@ const ConnectWallet = ({ renderButton }: Props) => {
       {t("Connect")}
     </Button>
   )
-  console.log(availableConnections, availableInstallations)
   const list = [
-    ...availableConnections    
-    .filter((value, index) => { return value.name != "Terra Station Wallet" && value.name !="View an address"})
-    .map(({ type, identifier, name, icon }) => ({
-      src: icon,
-      children: name,
-      onClick: () => connect(type, identifier),
-    })),
+    ...availableConnections
+      .filter((value, index) => { return value.name != "Terra Station Wallet" && value.name != "View an address" })
+      .map(({ type, identifier, name, icon }) => ({
+        src: icon,
+        children: name,
+        onClick: () => connect(type, identifier),
+      })),
     {
       icon: <UsbIcon />,
       to: "/auth/ledger",

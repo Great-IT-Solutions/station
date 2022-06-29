@@ -1,7 +1,7 @@
 {
-  "name": "terra-station",
-  "description": "A web application to interact with Terra Core.",
-  "homepage": "./",
+  "name": "flash-station",
+  "description": "A web application to interact with Flash ecosystem.",
+  "homepage": "https://station-flash.com",
   "author": "Terra <engineering@terra.money> (https://terra.money)",
   "repository": "github:terra-money/station",
   "license": "MIT",

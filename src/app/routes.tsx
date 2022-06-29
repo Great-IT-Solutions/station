@@ -73,9 +73,8 @@ export const useNav = () => {
 
   const menu = [
     {
-      path: "/dashboard",
-      pathname: "https://station-flash.com/",
-      element: <Redirect path="https://station-flash.com/" />,
+      path: "/dashboard",      
+      element: <Dashboard />,
       title: t("Dashboard"),
       icon: <img src={DashboardIcon} alt={`bridge`} {...ICON_SIZE} style={{filter: "brightness(0) invert(1)"}}/>,
     },

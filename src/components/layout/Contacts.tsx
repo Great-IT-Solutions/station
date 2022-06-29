@@ -7,7 +7,7 @@ import { ReactComponent as Telegram } from "styles/images/community/Telegram.svg
 import { ReactComponent as Twitter } from "styles/images/community/Twitter.svg"
 import { ReactComponent as Github } from "styles/images/community/Github.svg"
 import { ReactComponent as Linktree } from "styles/images/community/Linktree.svg"
-import WebsiteIcon from "styles/images/community/Website.svg"
+import WebsiteIcon from "styles/images/community/instagram.png"
 import { ExternalLink } from "components/general"
 import { Flex } from "components/layout"
 import styles from "./Contacts.module.scss"

@@ -2,7 +2,7 @@
 
 ![Banner](Banner.png)
 
-**Terra Station** is a web application to interact with [Terra Core](https://github.com/terra-money/core).
+**Terra Station** is a web application to interact with [Flash Ecosystem](https://github.com/terra-money/core).
 
 Terra Station allows users to:
 

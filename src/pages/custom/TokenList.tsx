@@ -2,6 +2,7 @@ import { Flex } from "components/layout"
 import { Fetching, Empty } from "components/feedback"
 import TokenItem, { TokenItemProps } from "./TokenItem"
 import styles from "./TokenList.module.scss"
+import FlashLogo from "../../styles/images/flash-logo.png"
 
 interface Props<T> extends QueryState {
   results: T[]
@@ -24,7 +25,7 @@ function TokenList<T extends { symbol: string }>(props: Props<T>) {
     base_denom: "wmatic-wei",
     symbol: "flash",
     name: "Flash Token",
-    icon: "https://www.svgrepo.com/show/13659/internet.svg",
+    icon: FlashLogo,
     decimals: 18
   } as any
 
@@ -32,7 +33,7 @@ function TokenList<T extends { symbol: string }>(props: Props<T>) {
     path: "transfer/channel-6",
     base_denom: "aave-wei",
     name: "Flash Token",
-    icon: "https://www.svgrepo.com/show/13659/internet.svg",
+    icon: FlashLogo,
     decimals: 18,
     token: "ibc/2E9CD07D7A6572A4CDAABBF0FBB89F69A9A362818132221182654819E277220A",
     title: "Flash",
